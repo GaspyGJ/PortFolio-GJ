@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+/* lo de arriba es porque importe algunas fuentes de letra*/
+
+
+/*border: 2px solid green;*/
+
+body{
+    font-family: 'Roboto',sans-serif;
+    /*overflow: hidden;/*para el menu ese que se va*/
+    /*background-image: linear-gradient(rgba(14,14,14, 0.5), rgba(12,12,12, 0.8)), url("../imagenes/fondo.png");
+    background-size:  cover;*/
+    background-color: rgb(11, 27, 51);
+    font-family:cursive;
+}
+
+#header-main{
+    height:calc(100vh - 4vh); /*4 mide el footer*/
+}
+
+/*********** HEADER *****************/
+nav .logo{
+    width: 100px;
+    height: 100px;
+}
+
+.ul-menu{
+    display: flex;
+    align-items:center; /*Centra verticalmente el menu*/
+    justify-content: space-around;
+}
+
+.ul-menu li{
+    font-size: 22px;
+    list-style: none;
+}
+
+.ul-menu li a{
+    padding: 10px;
+    text-decoration: none;
+    color:#EDCB54;
+}
+
+.ul-menu li a:hover{
+    border-bottom: 4px solid rgb(238, 232, 232);
+    transition: border-bottom 0.15s;
+}
+
+.icono-menu{
+    display: none; /*para que no se muestre*/
+}
+
+/*********** MAIN *****************/
+.main{
+    
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(7,1fr) ;
+    
+}
+
+.Info-Creador{
+    grid-column: 7/10;
+    grid-row: 3/6;  
+    color:white;
+    width: 25em;
+}
+.onda{
+    grid-column: 1/11;
+    grid-row: 6/8; 
+}
+
+.main h3{
+    font-family: 'Montserrat',sans-serif;
+    font-weight:bold;
+    font-size: 1.3em;
+}
+
+.main h1{
+    margin: 0px;
+    font-size: 4em;
+    color: #EDCB54;
+}
+
+.main p{
+    font-family: 'Montserrat',sans-serif;
+    font-weight:bold;
+}
+
+.BotonReadMore{
+    font-size: 1em;
+    background: none;
+    color:rgb(238, 232, 232);
+    padding: 10px 20px;
+    border: 1px solid #EDCB54;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.BotonReadMore:hover{
+    background-color: #EDCB54;
+    font-size: 1em;
+    color: rgb(16,16,16);
+}
+
+#extra{
+    grid-column: 2/4;
+    grid-row: 3/6; 
+    font-size: 1em;
+    color:rgb(238, 232, 232);
+    line-height: 2em;
+}
+
+
+/*********** Seccion Habilidades ***/
+
+
+#Seccion-Habilidades{
+    margin-top: -3em;
+    background-color:rgb(27, 50, 85);
+    color:#EDCB54;
+  
+    padding-left: 4.2em;
+    padding-right: 4.2em;
+    padding-bottom: 4.2em;
+   
+}
+
+#list-skills{
+    background-color: #edcc5446;
+    padding:1em;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+#list-skills li{
+    height: 100px;
+    width: 100px; 
+}
+
+
+
+/*********** Seccion Proyectos ***/
+
+#Seccion-Proyectos{
+    color:#EDCB54;
+  
+}
+
+#list-Proyectos div img{
+    width: 18em;
+}
+
+
+
+/*********** Seccion Contactos ***/
+#Seccion-Contacto{
+ 
+    padding-top: 1em;
+    padding-bottom: 4.2em;
+    background-color: rgb(27, 50, 85);
+    display: flex;
+    justify-content: space-around;
+}
+#Seccion-Contacto h3{
+    background-color: transparent;
+    color:rgb(235, 225, 225);
+}
+#form-Seccion-Contacto {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+
+    background-color: rgba(28, 39, 54, 0.534);
+    
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 8px;
+ 
+    gap:0.5em;
+
+    width: 40%;
+}
+
+#form-Seccion-Contacto *{
+    background-color: rgb(235, 225, 225);
+     padding: 0.4em;
+}
+
+#form-Seccion-Contacto textarea{
+    columns:50;
+}
+
+
+/*********** FOOTER *****************/
+
+ footer{
+    position: fixed;
+    background-color: black;
+    color:rgb(238, 232, 232);
+ 
+    width: 100%;
+    height: 4vh;
+}
+
+.ContactMe{
+    color: #EDCB54;
+}
+
+.RedesSociales{
+    display:flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.RedesSociales li{
+    color: #EDCB54;
+    margin-top: 0.5em;
+  
+}
+.RedesSociales a{
+    color: #EDCB54;
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+    /* HEADER */
+    .icono-menu{
+        color: rgb(238, 232, 232);
+        display: block; /*mostramos el icono*/
+        grid-column: 8/9;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav .ul-menu{
+        background-color:rgba(12,12,12, 0.9);
+        position:absolute;
+        right:0px;
+        top:30px;
+        margin-top: 30px;  
+        height: 50vh;
+        width: 25%;
+        display: grid;
+        align-items:center; /*los centro en el eje Y*/
+        transform: translateX(200%); /*lo saco de la pantalla para que no se vea*/
+        transition: transform 0.7s;  /*para el tiempo de transicion al ocultar o mostrar el menu*/
+
+    }
+   
+    .main .menu-toggle{  /*funciona con javascriot*/
+       color: antiquewhite;
+     }
+
+
+    nav .menu-toggle{  /*funciona con javascriot*/
+        transform: translateX(0%); /*lo traigo denuevo a pantalla*/
+
+       
+     } 
+
+     
+     /* MAIN */
+     .main .Info-Creador{
+         grid-column: 2/10;
+         grid-row: 4/8;
+     }
+     .main h3{
+        font-size: 1em;
+    }
+    
+    .main h1{
+        margin: 0px;
+        font-size: 3.5em;
+        color: #EDCB54;
+    }
+    
+    .main p{
+        font-size: 0.9em;
+        font-family: 'Montserrat',sans-serif;
+        font-weight:bold;
+    }
+
+
+
+}
