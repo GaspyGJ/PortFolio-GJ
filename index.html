@@ -20,9 +20,9 @@
             <nav>
                 <ul class="ul-menu" id="ul-menu">
                     <li><img src="./imagenes/gj.png" class="logo" alt="Gaspar Jullier logo"></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="Projectos.html">Proyectos</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#Seccion-Proyectos">Proyectos</a></li>
+                    <li><a href="#Seccion-Contacto">Contacto</a></li>
 
                 </ul>
 
@@ -32,7 +32,7 @@
 
             </nav>
         </header>
-
+      
         <main class="main">
             <div class="Info-Creador">
                 <h3>Creado por</h3>
@@ -45,28 +45,14 @@
                 <button id="BotonReadMore" class="BotonReadMore">Ver Mas</button>
             </div>
             <div id="extra" style="display:none">
-                <h3>Extra:</h3>
-                <ul id="list-extra">
-                    <li>
-                        <p>Siempre Aprendiendo</p>
-                    </li>
-
-                    <li>
-                        <p>Responsable</p>
-                    </li>
-
-                    <li>
-                        <p>Ingles Basico</p>
-                    </li>
-
-
-                </ul>
+                    <img src="./imagenes/fotogaspy.jpg">
             </div>
-            <div class="onda" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+           <!-- <div class="onda" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
                     preserveAspectRatio="none" style="height: 100%; width: 100%;">
                     <path d="M-11.84,-6.39 C124.15,172.22 374.15,-82.38 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                         style="stroke: none; fill: rgb(27, 50, 85);"></path>
                 </svg></div>
+            -->
         </main>
 
 
@@ -86,27 +72,28 @@
                     <li><img src="./imagenes/Skills/sql.png"></li>
                     <li><img src="./imagenes/Skills/git.png"></li>
                 </ul>
-            </list>
+           
 
         </div>
 
         <div id="Seccion-Proyectos">
 
 
-            <h3> Algunos Proyectos Personales:</h3>
+            <h3>Proyecto Personale:</h3>
             <br>
 
             <list>
                 <ul id="list-Proyectos">
                     <li>
                         App Web para gestionar compras del Super
-                        <p>Ejerci mis habilidades en Programacion Web Con <span>Angular</span> para plantear una
+                        <p>Utilize mis habilidades en Programacion Web Con <span>Angular</span> para plantear una
                             solucion a un problema cotidianto
                             que estaba teniendo, no poder gestionar de forma facil mi compra del super.
                         </p>
                         <p><a href="#">Ir al GitHub del Proyecto</a></p>
-                        <div><img src="./imagenes/Proyectos/Fakebook_2.png"></div>
+                        <!-- <div><img src="./imagenes/Proyectos/Fakebook_2.png"></div> -->
                     </li>
+
                     <!--
                     <li>
                         Juego de nave Espacial C++
@@ -151,12 +138,15 @@
                 <input type="submit" value="Enviar el correo">
             </form>
 
+             <!--
             <form id="form-Seccion-Contacto" name="Contacto Desde PortFolio" netlify>
                 <h3>Contactame Via Whatsapp:</h3>
-                <input type="email" placeholder="Coloque su Nro de telefono" required="">
+                <input type="tel"  required placeholder="Telefono 123-456-7890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
                 <textarea placeholder="Escriba su mensaje" rows="10" style="resize: none;"></textarea>
                 <input type="submit" value="Enviar el mensaje">
             </form>
+
+            -->
         </div>
 
 

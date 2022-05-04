@@ -2,6 +2,7 @@
 /* lo de arriba es porque importe algunas fuentes de letra*/
 
 
+
 /*border: 2px solid green;*/
 
 body{
@@ -54,7 +55,7 @@ nav .logo{
     
     display: grid;
     grid-template-columns: repeat(10,1fr);
-    grid-template-rows: repeat(7,1fr) ;
+    grid-template-rows: repeat(6,1fr) ;
     
 }
 
@@ -64,10 +65,10 @@ nav .logo{
     color:white;
     width: 25em;
 }
-.onda{
+/*.onda{
     grid-column: 1/11;
     grid-row: 6/8; 
-}
+}*/
 
 .main h3{
     font-family: 'Montserrat',sans-serif;
@@ -115,24 +116,28 @@ nav .logo{
 
 
 #Seccion-Habilidades{
-    margin-top: -3em;
-    background-color:rgb(27, 50, 85);
+    margin-top: 0;
+
+
     color:#EDCB54;
   
-    padding-left: 4.2em;
-    padding-right: 4.2em;
-    padding-bottom: 4.2em;
+    margin-bottom: 5em;
    
 }
 
 #list-skills{
     background-color: #edcc5446;
-    padding-top:1em;
-    padding-bottom: 1em;
-    padding-right: 0.5em;
+
+    padding: 1em 0 1em 0;
+
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+#list-skills li{
+    width: 5em;
+    height: 5em;
 }
 
 /*********** Seccion Proyectos ***/
@@ -153,9 +158,10 @@ nav .logo{
  
     padding-top: 1em;
     padding-bottom: 4.2em;
-    background-color: rgb(27, 50, 85);
-    display: flex;
-    justify-content: space-around;
+  
+    /*display: flex;
+    justify-content: space-around;*/
+
 }
 #Seccion-Contacto h3{
     background-color: transparent;
@@ -174,15 +180,14 @@ nav .logo{
     gap:0.5em;
 
     width: 40%;
+
+    margin: 0 auto; /*par centrarlo*/
 }
 
 #form-Seccion-Contacto *{
     background-color: rgb(235, 225, 225);
      padding: 0.4em;
-}
-
-#form-Seccion-Contacto textarea{
-    columns:50;
+     border: none;
 }
 
 
@@ -220,63 +225,14 @@ nav .logo{
 
 @media only screen and (max-width: 600px){
 
-    /* HEADER */
-    .icono-menu{
-        color: rgb(238, 232, 232);
-        display: block; /*mostramos el icono*/
-        grid-column: 8/9;
-        font-size: 25px;
-        cursor: pointer;
+    #form-Seccion-Contacto {
+        
+        width: 80%;
+    
     }
 
-    nav .ul-menu{
-        background-color:rgba(12,12,12, 0.9);
-        position:absolute;
-        right:0px;
-        top:30px;
-        margin-top: 30px;  
-        height: 50vh;
-        width: 25%;
-        display: grid;
-        align-items:center; /*los centro en el eje Y*/
-        transform: translateX(200%); /*lo saco de la pantalla para que no se vea*/
-        transition: transform 0.7s;  /*para el tiempo de transicion al ocultar o mostrar el menu*/
 
-    }
    
-    .main .menu-toggle{  /*funciona con javascriot*/
-       color: antiquewhite;
-     }
-
-
-    nav .menu-toggle{  /*funciona con javascriot*/
-        transform: translateX(0%); /*lo traigo denuevo a pantalla*/
-
-       
-     } 
-
-     
-     /* MAIN */
-     .main .Info-Creador{
-         grid-column: 2/10;
-         grid-row: 4/8;
-     }
-     .main h3{
-        font-size: 1em;
-    }
-    
-    .main h1{
-        margin: 0px;
-        font-size: 3.5em;
-        color: #EDCB54;
-    }
-    
-    .main p{
-        font-size: 0.9em;
-        font-family: 'Montserrat',sans-serif;
-        font-weight:bold;
-    }
-
 
 
 }
