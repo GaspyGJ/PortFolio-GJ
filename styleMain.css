@@ -10,6 +10,7 @@ body{
     /*background-image: linear-gradient(rgba(14,14,14, 0.5), rgba(12,12,12, 0.8)), url("../imagenes/fondo.png");
     background-size:  cover;*/
     background-color: rgb(11, 27, 51);
+    background: url("./imagenes/fondo.svg");
     font-family:cursive;
 }
 
@@ -116,7 +117,7 @@ nav .logo{
 
 #Seccion-Habilidades{
     margin-top: -3em;
-    background-color:rgb(27, 50, 85);
+    
     color:#EDCB54;
   
     padding-left: 4.2em;
@@ -153,7 +154,7 @@ nav .logo{
  
     padding-top: 1em;
     padding-bottom: 4.2em;
-    background-color: rgb(27, 50, 85);
+    
     display: flex;
     justify-content: space-around;
 }
@@ -166,7 +167,7 @@ nav .logo{
     flex-direction: column;
     padding: 0.5em;
 
-    background-color: rgba(28, 39, 54, 0.534);
+    background-color:  #edcc5446;
     
     border: 1px solid rgb(80, 80, 80);
     border-radius: 8px;
