@@ -5,128 +5,131 @@
 
 /*border: 2px solid green;*/
 
-body{
-    font-family: 'Roboto',sans-serif;
+
+body {
+    font-family: 'Roboto', sans-serif;
     /*overflow: hidden;/*para el menu ese que se va*/
     /*background-image: linear-gradient(rgba(14,14,14, 0.5), rgba(12,12,12, 0.8)), url("../imagenes/fondo.png");
     background-size:  cover;*/
-    background-color: rgb(11, 27, 51);
-    font-family:cursive;
-}
+    background: url("./imagenes/fondo.svg");
+    font-family: cursive;
+   
 
-#header-main{
-    height:calc(100vh - 4vh); /*4 mide el footer*/
+}
+#header-main {
+    height: calc(100vh - 4vh);
+    /*4 mide el footer*/
 }
 
 /*********** HEADER *****************/
-nav .logo{
+nav .logo {
     width: 100px;
     height: 100px;
 }
 
-.ul-menu{
+.ul-menu {
     display: flex;
-    align-items:center; /*Centra verticalmente el menu*/
+    align-items: center;
+    /*Centra verticalmente el menu*/
     justify-content: space-around;
 }
 
-.ul-menu li{
+.ul-menu li {
     font-size: 22px;
     list-style: none;
 }
 
-.ul-menu li a{
+.ul-menu li a {
     padding: 10px;
     text-decoration: none;
-    color:#EDCB54;
+    color: rgb(238, 232, 232)
 }
 
-.ul-menu li a:hover{
+.ul-menu li a:hover {
     border-bottom: 4px solid rgb(238, 232, 232);
     transition: border-bottom 0.15s;
 }
 
-.icono-menu{
-    display: none; /*para que no se muestre*/
+.icono-menu {
+    display: none;
+    /*para que no se muestre*/
 }
 
 /*********** MAIN *****************/
-.main{
+
+
+.main {
     
     display: grid;
-    grid-template-columns: repeat(10,1fr);
-    grid-template-rows: repeat(6,1fr) ;
-    
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
 }
 
-.Info-Creador{
+.Info-Creador {
     grid-column: 7/10;
-    grid-row: 3/6;  
-    color:white;
+    grid-row: 3/6;
+    color: white;
     width: 25em;
-}
-/*.onda{
-    grid-column: 1/11;
-    grid-row: 6/8; 
-}*/
 
-.main h3{
-    font-family: 'Montserrat',sans-serif;
-    font-weight:bold;
+}
+
+
+.main h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     font-size: 1.3em;
 }
 
-.main h1{
+.main h1 {
     margin: 0px;
     font-size: 4em;
-    color: #EDCB54;
+    color: #cf08c5;
 }
 
-.main p{
-    font-family: 'Montserrat',sans-serif;
-    font-weight:bold;
+.main p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
-.BotonReadMore{
+.BotonReadMore {
     font-size: 1em;
     background: none;
-    color:rgb(238, 232, 232);
+    color: rgb(238, 232, 232);
     padding: 10px 20px;
     border: 1px solid #EDCB54;
     border-radius: 30px;
     margin-top: 10px;
 }
 
-.BotonReadMore:hover{
+.BotonReadMore:hover {
     background-color: #EDCB54;
     font-size: 1em;
-    color: rgb(16,16,16);
+    color: rgb(16, 16, 16);
+
+    transition: background-color 0.5s;
 }
 
-#extra{
+#extra {
     grid-column: 2/4;
-    grid-row: 3/6; 
+    grid-row: 3/6;
     font-size: 1em;
-    color:rgb(238, 232, 232);
+    color: rgb(238, 232, 232);
     line-height: 2em;
 }
 
 
 /*********** Seccion Habilidades ***/
 
-
-#Seccion-Habilidades{
-    margin-top: 0;
-
-
-    color:#EDCB54;
-  
-    margin-bottom: 5em;
-   
+#Seccion-Habilidades {
+    color: #EDCB54;
+    height: 40%;
+    
 }
+    
 
-#list-skills{
-    background-color: #edcc5446;
+#list-skills {
+    background-color: #a7a4a146;
 
     padding: 1em 0 1em 0;
 
@@ -134,105 +137,159 @@ nav .logo{
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
-#list-skills li{
+
+#list-skills li {
     width: 5em;
     height: 5em;
-}
 
+    animation-name: example;
+    animation-duration: 1.2s;
+    }
+    @keyframes example {
+        0% {
+            height: 0;
+        
+        }
+    
+        100% {
+            height: 5em;
+            
+        }
+    }
 /*********** Seccion Proyectos ***/
 
-#Seccion-Proyectos{
-    color:#EDCB54;
-  
+#Seccion-Proyectos {
+
+    color: #EDCB54;
+
+    line-height: 1.8em;
 }
 
-#list-Proyectos div img{
-    width: 18em;
+#list-Proyectos {
+    text-align: center;
+}
+
+.container-fotos-proyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+
+
+}
+
+#list-Proyectos div img {
+    width: 25em;
+    height: 42em;
+}
+
+#Seccion-Proyectos a {
+    color: #b44baf;
+    Text-decoration: none;
+
+}
+
+#Seccion-Proyectos a:visited {
+    color: #b44baf;
 }
 
 
 
 /*********** Seccion Contactos ***/
-#Seccion-Contacto{
- 
-    padding-top: 1em;
-    padding-bottom: 4.2em;
-  
-    /*display: flex;
-    justify-content: space-around;*/
+#Seccion-Contacto {
 
+
+    margin: 3em;
+
+    border-top: 1px solid white;
+
+    padding-top: 10%;
+
+    padding-bottom: 4.2em;
 }
-#Seccion-Contacto h3{
+
+#Seccion-Contacto h3 {
     background-color: transparent;
-    color:rgb(235, 225, 225);
+    color: rgb(235, 225, 225);
 }
+
 #form-Seccion-Contacto {
     display: flex;
     flex-direction: column;
     padding: 0.5em;
 
-    background-color: rgba(28, 39, 54, 0.534);
-    
+
+
+    background-color: #a7a4a146;
+
     border: 1px solid rgb(80, 80, 80);
     border-radius: 8px;
- 
-    gap:0.5em;
+
+    gap: 0.5em;
 
     width: 40%;
 
-    margin: 0 auto; /*par centrarlo*/
+    margin: 0 auto;
+    /*par centrarlo*/
 }
 
-#form-Seccion-Contacto *{
+#form-Seccion-Contacto * {
     background-color: rgb(235, 225, 225);
-     padding: 0.4em;
-     border: none;
+    padding: 0.4em;
+    border: none;
 }
 
 
 /*********** FOOTER *****************/
 
- footer{
+footer {
     position: fixed;
-    background-color: black;
-    color:rgb(238, 232, 232);
- 
+    background-color: #021233;
+
     width: 100%;
     height: 4vh;
 }
 
-.ContactMe{
+.ContactMe {
     color: #EDCB54;
+    background-color: #a7a4a1cb;
 }
 
-.RedesSociales{
-    display:flex;
+.RedesSociales {
+    display: flex;
     justify-content: space-around;
     list-style: none;
 }
 
-.RedesSociales li{
+.RedesSociales li {
     color: #EDCB54;
     margin-top: 0.5em;
-  
+
 }
-.RedesSociales a{
+
+.RedesSociales a {
     color: #EDCB54;
 }
 
 
+.titulo-de-seccion {
+    text-align: center;
+    color: #cf08c5;
+}
 
-@media only screen and (max-width: 600px){
+
+@media only screen and (max-width: 600px) {
 
     #form-Seccion-Contacto {
-        
+
         width: 80%;
-    
+
     }
 
 
-   
+
 
 
 }
