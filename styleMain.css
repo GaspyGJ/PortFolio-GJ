@@ -12,27 +12,6 @@
     }
 }
 
-@keyframes burbujas {
-    0% {
-        bottom: 0;
-        opacity: 0;
-        visibility: visible;
-    }
-
-    30% {
-        transform: translateX(30px);
-    }
-
-    50% {
-        opacity: .4;
-    }
-
-    100% {
-        bottom: 100vh;
-        opacity: 0;
-    }
-}
-
 @keyframes movimiento {
     0% {
         transform: translateY(0);
@@ -47,114 +26,7 @@
     }
 }
 
-.burbuja {
-    border-radius: 50%;
-    background: #fff;
-    opacity: .3;
-    visibility: visible;
 
-    position: absolute;
-  
-
-    /*animation: burbujas 3s linear 20s infinite;*/
-    animation-name: burbujas;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-delay: 20s;
-    animation-iteration-count: infinite;
-
-}
-
-
-.burbuja:nth-child(1) {
-    visibility: hidden;
-    width: 80px;
-    height: 80px;
-    left: 5%;
-    animation-duration: 3s;
-    animation-delay: 3s;
-}
-
-.burbuja:nth-child(2) {
-    visibility: hidden;
-    width: 100px;
-    height: 100px;
-    left: 35%;
-    animation-duration: 3s;
-    animation-delay: 5s;
-}
-
-.burbuja:nth-child(3) {
-    visibility: hidden;
-    width: 20px;
-    height: 20px;
-    left: 15%;
-    animation-duration: 1.5s;
-    animation-delay: 7s;
-}
-
-.burbuja:nth-child(4) {
-    visibility: hidden;
-    width: 50px;
-    height: 50px;
-    left: 90%;
-    animation-duration: 6s;
-    animation-delay: 3s;
-}
-
-.burbuja:nth-child(5) {
-    visibility: hidden;
-    width: 70px;
-    height: 70px;
-    left: 65%;
-    animation-duration: 3s;
-    animation-delay: 3s;
-}
-
-.burbuja:nth-child(6) {
-    visibility: hidden;
-    width: 20px;
-    height: 20px;
-    left: 50%;
-    animation-duration: 4s;
-    animation-delay: 5s;
-}
-
-.burbuja:nth-child(7) {
-    visibility: hidden;
-    width: 20px;
-    height: 20px;
-    left: 50%;
-    animation-duration: 4s;
-    animation-delay: 5s;
-}
-
-.burbuja:nth-child(8) {
-    visibility: hidden;
-    width: 100;
-    height: 100px;
-    left: 52%;
-    animation-duration: 5s;
-    animation-delay: 5s;
-}
-
-.burbuja:nth-child(9) {
-    visibility: hidden;
-    width: 65px;
-    height: 65px;
-    left: 51%;
-    animation-duration: 3s;
-    animation-delay: 2s;
-}
-
-.burbuja:nth-child(10) {
-    visibility: hidden;
-    width: 40px;
-    height: 40px;
-    left: 35%;
-    animation-duration: 3s;
-    animation-delay: 4s;
-}
 
 
 
@@ -201,6 +73,8 @@ nav .logo {
     padding: 10px;
     text-decoration: none;
     color: #cf08c5;
+    font-size: 1.5em;
+
     animation-name: color-blanco-rosa;
     animation-duration: 6s;
 }
@@ -297,7 +171,7 @@ nav .logo {
 
 #list-skills {
     background-color: #a7a4a146;
-
+    margin-top: 2em;
     padding: 1em 0 1em 0;
 
     list-style: none;
@@ -305,14 +179,23 @@ nav .logo {
     justify-content: space-around;
     align-items: center;
 
+    overflow: visible;
+
 }
 
 #list-skills li {
     width: 5em;
     height: 5em;
+ 
+    transition: transform 1s;
+}
 
-    position: relative;
-    z-index: 10;
+#list-skills li:hover {
+    width: 5em;
+    height: 5em;
+    transform: scale(1.5) ;
+
+transition: transform 1s;
 }
 
 /*********** Seccion Proyectos ***/
@@ -365,15 +248,14 @@ nav .logo {
 
 /*********** Seccion Contactos ***/
 #Seccion-Contacto {
-
-
     margin: 3em;
 
     border-top: 1px solid white;
 
-    padding-top: 5%;
+    margin-top:10%;
+    padding-top: 5em;
 
-    padding-bottom: 4.2em;
+    padding-bottom: 8em;
 }
 
 #Seccion-Contacto h3 {
@@ -407,8 +289,9 @@ nav .logo {
 
 footer {
     position: fixed;
-    background-color: #021233;
-
+    /*background-color: #021233;*/
+    background-color: black;
+    border-top: 1px solid white;
     width: 100%;
     height: 4vh;
 }
@@ -425,13 +308,13 @@ footer {
 }
 
 .RedesSociales li {
-    color: #EDCB54;
+    color: #b44baf;
     margin-top: 0.5em;
 
 }
 
 .RedesSociales a {
-    color: #EDCB54;
+    color: #b44baf;
 }
 
 
