@@ -1,5 +1,42 @@
 
-const botonVerMas= document.getElementById("BotonReadMore");
+
+//utilizamos la libreria de scrollreveal.js
+window.sr=ScrollReveal();
+
+sr.reveal('#ul-menu',{
+    duration: 2500,
+    origin: 'bottom',
+    distance:'-100px'
+
+})
+
+sr.reveal('.main',{
+    duration: 3000,
+    origin: 'rigth',
+    distance: '-300px'
+})
+
+sr.reveal('#Seccion-Habilidades',{
+    duration: 3000,
+    origin: 'bottom',
+    distance:'-100px'
+})
+
+sr.reveal('#Seccion-Proyectos',{
+    duration: 2000,
+    origin: 'bottom',
+    distance:'-100px'
+})
+
+
+sr.reveal('#Seccion-Contacto',{
+    duration: 3000,
+    origin: 'bottom',
+    distance:'-100px'
+})
+
+
+/*const botonVerMas= document.getElementById("BotonReadMore");
 console.log(botonVerMas)
 flag=false;
 botonVerMas.addEventListener( "click", (e)=>{
@@ -12,4 +49,4 @@ botonVerMas.addEventListener( "click", (e)=>{
         extra.style.display="none";
         flag=false;
     }
-    } )
+    } )*/

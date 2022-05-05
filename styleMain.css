@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 /* lo de arriba es porque importe algunas fuentes de letra*/
 
+/*declaro esta funcion*/
+@keyframes color-blanco-rosa {
+    from {
+        color: white;
+    }
 
-
+    to {
+        color: #cf08c5;
+    }
+}
 /*border: 2px solid green;*/
 
 
@@ -11,7 +19,7 @@ body {
     /*overflow: hidden;/*para el menu ese que se va*/
     /*background-image: linear-gradient(rgba(14,14,14, 0.5), rgba(12,12,12, 0.8)), url("../imagenes/fondo.png");
     background-size:  cover;*/
-    background: url("./imagenes/fondo.svg");
+   background-color: black;
     font-family: cursive;
 }
 
@@ -22,16 +30,18 @@ body {
 }
 
 /*********** HEADER *****************/
-nav .logo {
-    width: 100px;
-    height: 100px;
-}
+
 
 .ul-menu {
     display: flex;
     align-items: center;
     /*Centra verticalmente el menu*/
     justify-content: space-around;
+}
+
+nav .logo {
+    width: 100px;
+    height: 100px;
 }
 
 .ul-menu li {
@@ -42,8 +52,11 @@ nav .logo {
 .ul-menu li a {
     padding: 10px;
     text-decoration: none;
-    color: rgb(238, 232, 232)
+    color: #cf08c5;
+    animation-name: color-blanco-rosa;
+    animation-duration: 6s;
 }
+
 
 .ul-menu li a:hover {
     border-bottom: 4px solid rgb(238, 232, 232);
@@ -62,18 +75,18 @@ nav .logo {
 
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     overflow: hidden;
-    max-height: 28em;
+    
 }
 
 .Info-Creador {
     grid-column: 7/10;
     grid-row: 3/6;
     color: white;
-
-
 }
+
+
 
 .main h3 {
     font-family: 'Montserrat', sans-serif;
@@ -85,18 +98,8 @@ nav .logo {
     margin: 0px;
     font-size: 4em;
     color: #cf08c5;
-    animation-name: example1;
-    animation-duration: 3s;
-}
-
-@keyframes example1 {
-    from {
-        color: white;
-    }
-
-    to {
-        color: #cf08c5;
-    }
+    animation-name: color-blanco-rosa;
+    animation-duration: 6s;
 }
 
 .main p {
@@ -137,9 +140,12 @@ nav .logo {
 /*********** Seccion Habilidades ***/
 
 #Seccion-Habilidades {
+    margin-top: 8%;
     color: #EDCB54;
     height: 40%;
 }
+
+
 
 
 #list-skills {
@@ -158,19 +164,6 @@ nav .logo {
     width: 5em;
     height: 5em;
 
-    animation-name: example;
-    animation-duration: 1.2s;
-}
-
-@keyframes example {
-    0% {
-        height: 0;
-
-    }
-
-    100% {
-        height: 5em;
-    }
 }
 
 /*********** Seccion Proyectos ***/
@@ -180,10 +173,17 @@ nav .logo {
     color: #EDCB54;
 
     line-height: 1.8em;
+    
+    padding-top: 5%;
+
+    margin: 0 4em 0 4em;
+
+    border-top: 1px solid white;
 }
 
 #list-Proyectos {
     text-align: center;
+    list-style: none;
 }
 
 .container-fotos-proyectos {
@@ -196,6 +196,7 @@ nav .logo {
 }
 
 #list-Proyectos div img {
+    margin-top:2em;
     width: 25em;
     height: 42em;
 }
@@ -220,24 +221,19 @@ nav .logo {
 
     border-top: 1px solid white;
 
-    padding-top: 10%;
+    padding-top: 5%;
 
     padding-bottom: 4.2em;
 }
 
 #Seccion-Contacto h3 {
     background-color: transparent;
-    color: rgb(235, 225, 225);
 }
 
 #form-Seccion-Contacto {
     display: flex;
     flex-direction: column;
     padding: 0.5em;
-
-
-
-    background-color: #a7a4a146;
 
     border: 1px solid rgb(80, 80, 80);
     border-radius: 8px;
@@ -291,8 +287,13 @@ footer {
 
 .titulo-de-seccion {
     text-align: center;
+    font-size: 2em;
     color: #cf08c5;
+    
+    animation-name: color-blanco-rosa;
+    animation-duration: 6s;
 }
+    
 
 
 @media only screen and (max-width: 600px) {
