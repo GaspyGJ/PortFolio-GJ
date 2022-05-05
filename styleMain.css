@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 /* lo de arriba es porque importe algunas fuentes de letra*/
 
-/*declaro esta funcion*/
+/*declaro  funciones*/
 @keyframes color-blanco-rosa {
     from {
         color: white;
@@ -11,15 +11,161 @@
         color: #cf08c5;
     }
 }
-/*border: 2px solid green;*/
 
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+        visibility: visible;
+    }
+
+    30% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.burbuja {
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+    visibility: visible;
+
+    position: absolute;
+  
+
+    /*animation: burbujas 3s linear 20s infinite;*/
+    animation-name: burbujas;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+
+.burbuja:nth-child(1) {
+    visibility: hidden;
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+    visibility: hidden;
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4) {
+    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+    visibility: hidden;
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(6) {
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8) {
+    visibility: hidden;
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9) {
+    visibility: hidden;
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+    visibility: hidden;
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+
+
+/*border: 2px solid green;*/
 
 body {
     font-family: 'Roboto', sans-serif;
     /*overflow: hidden;/*para el menu ese que se va*/
     /*background-image: linear-gradient(rgba(14,14,14, 0.5), rgba(12,12,12, 0.8)), url("../imagenes/fondo.png");
     background-size:  cover;*/
-   background-color: black;
+    background-color: black;
     font-family: cursive;
 }
 
@@ -37,11 +183,13 @@ body {
     align-items: center;
     /*Centra verticalmente el menu*/
     justify-content: space-around;
+    
 }
 
 nav .logo {
     width: 100px;
     height: 100px;
+   
 }
 
 .ul-menu li {
@@ -70,14 +218,13 @@ nav .logo {
 
 /*********** MAIN *****************/
 
-
 .main {
 
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(5, 1fr);
     overflow: hidden;
-    
+
 }
 
 .Info-Creador {
@@ -164,6 +311,8 @@ nav .logo {
     width: 5em;
     height: 5em;
 
+    position: relative;
+    z-index: 10;
 }
 
 /*********** Seccion Proyectos ***/
@@ -173,12 +322,13 @@ nav .logo {
     color: #EDCB54;
 
     line-height: 1.8em;
-    
+
     padding-top: 5%;
 
     margin: 0 4em 0 4em;
 
     border-top: 1px solid white;
+
 }
 
 #list-Proyectos {
@@ -196,7 +346,7 @@ nav .logo {
 }
 
 #list-Proyectos div img {
-    margin-top:2em;
+    margin-top: 2em;
     width: 25em;
     height: 42em;
 }
@@ -289,11 +439,11 @@ footer {
     text-align: center;
     font-size: 2em;
     color: #cf08c5;
-    
+
     animation-name: color-blanco-rosa;
     animation-duration: 6s;
 }
-    
+
 
 
 @media only screen and (max-width: 600px) {
