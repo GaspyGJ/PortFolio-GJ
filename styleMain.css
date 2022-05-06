@@ -91,7 +91,7 @@ nav .logo {
 
 
 .ul-menu li a:hover {
-    border-bottom: 4px solid rgb(238, 232, 232);
+    border-bottom: 4px solid #EDCB54;
     transition: border-bottom 0.15s;
 }
 
@@ -103,12 +103,9 @@ nav .logo {
 /*********** MAIN *****************/
 
 .main {
-
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    overflow: hidden;
-
 }
 
 .Info-Creador {
@@ -120,7 +117,7 @@ nav .logo {
 
 
 .main h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'sans-serif';
     font-weight: bold;
     font-size: 1.3em;
 }
@@ -134,38 +131,9 @@ nav .logo {
 }
 
 .main p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'sans-serif';
     font-weight: bold;
 }
-
-
-
-.BotonReadMore {
-    font-size: 1em;
-    background: none;
-    color: rgb(238, 232, 232);
-    padding: 10px 20px;
-    border: 1px solid #EDCB54;
-    border-radius: 30px;
-    margin-top: 10px;
-}
-
-.BotonReadMore:hover {
-    background-color: #EDCB54;
-    font-size: 1em;
-    color: rgb(16, 16, 16);
-
-    transition: background-color 0.5s;
-}
-
-#extra {
-    grid-column: 2/4;
-    grid-row: 3/6;
-    font-size: 1em;
-    color: rgb(238, 232, 232);
-    line-height: 2em;
-}
-
 
 
 /*********** Seccion Habilidades ***/
@@ -176,21 +144,18 @@ nav .logo {
     height: 40%;
 }
 
-
-
-
 #list-skills {
     background-color: #a7a4a146;
     margin-top: 2em;
     padding: 1em 0 1em 0;
 
     list-style: none;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
 
     overflow: visible;
-
 }
 
 #list-skills li {
@@ -343,24 +308,23 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: baseline;
-            position: absolute;
             height: 0%;
-            z-index: 30;
+            width: 100%;
+
+            background-color: rgb(30, 27, 49);
+            border-radius: 1em;
+          
+            position: absolute;
+            z-index: 40;
             overflow: hidden;
-            transition: height 1s;
+            transition: height 1s;    
     }   
 
-    .ul-menu:hover{
-        height: 0%;
-    }
+
     #menu-sandwich{
         position:relative;
         z-index: 30;
     }
-
-.ul-menu li a:hover {
-
-}
     
    #menu-logo {
        display: none;
@@ -372,11 +336,32 @@ footer {
         fill:#cf08c5;
     }
 
+    .main {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(4, 5em);
+    }
+    
+    .Info-Creador {
+        grid-column: 4/10;
+        grid-row: 1/4;
+        color: #EDCB54;
+    }
+
+    #list-skills {
+        display: flex;
+        align-items: center;
+        align-items: end;
+        padding: 0;
+        overflow: visible;
+        padding: 1em 0 1em 0;
+    }
+    
     #list-Proyectos div img {
         display: none;
     }
     #form-Seccion-Contacto {
-        width: 75%;
+        width: 100%;
     }
     
     

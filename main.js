@@ -36,21 +36,34 @@ sr.reveal('#Seccion-Contacto',{
 
 //---------Termino el scroll reveal--------------
 
-const menu= document.getElementById("menu-sandwich");
-console.log(menu)
-menuVisible=false;
+//--Para deplegar o no el menu
+function desplegar_plegarMenu(){
+    const menu= document.getElementById("menu-sandwich");
+    console.log(menu)
+    menuVisible=false;
+    
+    menu.addEventListener( "click", (e)=>{
+        console.log("Entre")
+    
+        const menu= document.getElementById("ul-menu");
+        if(menuVisible==true){
+            menu.style.height="0%";
+            menuVisible=false;
+        }
+        else{
+            menu.style.height="50%";
+            menuVisible=true;
+        }
+    
+    } );
+}
+desplegar_plegarMenu();
+//---------------------------------
 
-menu.addEventListener( "click", (e)=>{
-    console.log("Entre")
-
-    const menu= document.getElementById("ul-menu");
-    if(menuVisible==true){
-        menu.style.height="0%";
-        menuVisible=false;
-    }
-    else{
-        menu.style.height="35%";
-        menuVisible=true;
-    }
-
+//--Para plegar el menu cuando selecciono una opcion
+const ulMenu= document.getElementById("ul-menu");
+ulMenu.addEventListener( "click", (e)=>{
+        ulMenu.style.height="0%";
 } );
+//---------------------------------
+
