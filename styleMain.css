@@ -27,9 +27,6 @@
 }
 
 
-
-
-
 /*border: 2px solid green;*/
 
 body {
@@ -41,10 +38,17 @@ body {
     font-family: cursive;
 }
 
+#particles-js{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+  
+} 
 
 #header-main {
     height: calc(100vh - 4vh);
     /*4 mide el footer*/
+    
 }
 
 /*********** HEADER *****************/
@@ -104,7 +108,7 @@ nav .logo {
 .Info-Creador {
     grid-column: 7/10;
     grid-row: 3/6;
-    color: white;
+    color: #EDCB54;
 }
 
 
@@ -186,16 +190,15 @@ nav .logo {
 #list-skills li {
     width: 5em;
     height: 5em;
- 
+    /*position: relative;
+    z-index: 20;*/
     transition: transform 1s;
 }
 
 #list-skills li:hover {
     width: 5em;
     height: 5em;
-    transform: scale(1.5) ;
-
-transition: transform 1s;
+    transform: scale(1.6) ;
 }
 
 /*********** Seccion Proyectos ***/
@@ -248,7 +251,8 @@ transition: transform 1s;
 
 /*********** Seccion Contactos ***/
 #Seccion-Contacto {
-    margin: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
 
     border-top: 1px solid white;
 
@@ -328,17 +332,14 @@ footer {
 }
 
 
-
 @media only screen and (max-width: 600px) {
 
-    #form-Seccion-Contacto {
-
-        width: 80%;
-
+    #list-Proyectos div img {
+        display: none;
     }
-
-
-
-
-
+    #form-Seccion-Contacto {
+        width: 75%;
+    }
+    
+    
 }

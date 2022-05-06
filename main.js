@@ -1,5 +1,3 @@
-
-
 //utilizamos la libreria de scrollreveal.js
 window.sr=ScrollReveal();
 
