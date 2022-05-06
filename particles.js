@@ -1,4 +1,3 @@
-console.log("abre");
 particlesJS(
     {
         "particles": {

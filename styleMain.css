@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 /* lo de arriba es porque importe algunas fuentes de letra*/
 
+
 /*declaro  funciones*/
 @keyframes color-blanco-rosa {
     from {
@@ -35,6 +36,7 @@ body {
     /*background-image: linear-gradient(rgba(14,14,14, 0.5), rgba(12,12,12, 0.8)), url("../imagenes/fondo.png");
     background-size:  cover;*/
     background-color: black;
+    color: #EDCB54;
     font-family: cursive;
 }
 
@@ -53,9 +55,9 @@ body {
 
 /*********** HEADER *****************/
 
-
 .ul-menu {
     display: flex;
+    flex-direction: row;
     align-items: center;
     /*Centra verticalmente el menu*/
     justify-content: space-around;
@@ -67,6 +69,10 @@ nav .logo {
     height: 100px;
    
 }
+ 
+#menu-sandwich{
+     display:none;
+ }
 
 .ul-menu li {
     font-size: 22px;
@@ -190,8 +196,7 @@ nav .logo {
 #list-skills li {
     width: 5em;
     height: 5em;
-    /*position: relative;
-    z-index: 20;*/
+  
     transition: transform 1s;
 }
 
@@ -238,13 +243,13 @@ nav .logo {
 }
 
 #Seccion-Proyectos a {
-    color: #b44baf;
+    color: #cf08c5;
     Text-decoration: none;
 
 }
 
 #Seccion-Proyectos a:visited {
-    color: #b44baf;
+    color: #cf08c5;
 }
 
 
@@ -312,13 +317,13 @@ footer {
 }
 
 .RedesSociales li {
-    color: #b44baf;
+    color: #cf08c5;
     margin-top: 0.5em;
 
 }
 
 .RedesSociales a {
-    color: #b44baf;
+    color: #cf08c5;
 }
 
 
@@ -333,6 +338,39 @@ footer {
 
 
 @media only screen and (max-width: 600px) {
+
+    .ul-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            position: absolute;
+            height: 0%;
+            z-index: 30;
+            overflow: hidden;
+            transition: height 1s;
+    }   
+
+    .ul-menu:hover{
+        height: 0%;
+    }
+    #menu-sandwich{
+        position:relative;
+        z-index: 30;
+    }
+
+.ul-menu li a:hover {
+
+}
+    
+   #menu-logo {
+       display: none;
+    }
+    #menu-sandwich{
+        display: inline;
+    }
+    #menu-sandwich svg{
+        fill:#cf08c5;
+    }
 
     #list-Proyectos div img {
         display: none;

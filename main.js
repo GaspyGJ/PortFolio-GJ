@@ -34,17 +34,23 @@ sr.reveal('#Seccion-Contacto',{
 })
 
 
-/*const botonVerMas= document.getElementById("BotonReadMore");
-console.log(botonVerMas)
-flag=false;
-botonVerMas.addEventListener( "click", (e)=>{
-    const extra= document.getElementById("extra");
-    if(!flag){
-        extra.style.display="block";
-        flag=true;
+//---------Termino el scroll reveal--------------
+
+const menu= document.getElementById("menu-sandwich");
+console.log(menu)
+menuVisible=false;
+
+menu.addEventListener( "click", (e)=>{
+    console.log("Entre")
+
+    const menu= document.getElementById("ul-menu");
+    if(menuVisible==true){
+        menu.style.height="0%";
+        menuVisible=false;
     }
     else{
-        extra.style.display="none";
-        flag=false;
+        menu.style.height="35%";
+        menuVisible=true;
     }
-    } )*/
+
+} );
