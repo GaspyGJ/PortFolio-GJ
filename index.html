@@ -50,7 +50,7 @@
                 <h3>Programador</h3>
                 <h1>Gaspar <br> Jullier</h1>
                 <p>Estudiante de Ing.Sistemas y <br>
-                    autodidacta en el desarrollo web y <br> otras tegnologias
+                    autodidacta en desarrollo web y <br> otras tegnologias
                 </p>
 
                 <!-- <button id="BotonReadMore" class="BotonReadMore">Ver Mas</button> -->
@@ -120,15 +120,15 @@
 
 
         <div id="Seccion-Contacto">
-
+                                <!--mail = 9e3dfb4a0207a49264f593141b297a96
+                                https://gaspygj.github.io/PortFolio-GJ/#Seccion-Contacto-->
             <form id="form-Seccion-Contacto" action="https://formsubmit.co/gaspygj@gmail.com" method="POST" >
                 <h3 class="titulo-de-seccion">Contactame Via Email:</h3>
-                <input type="email" name="email" placeholder="Coloque su e-mail" required="">
+                <input id="email" type="email" name="email" placeholder="Coloque su e-mail" required="">
                 <!--rows="10" cols="50" -->
-                <textarea placeholder="Escriba su mensaje" name="contenido" rows="10" style="resize: none;"></textarea>
-                <input type="submit" value="Enviar el correo">
-
-                <input type="hidden" name="_next" value="https://gaspygj.github.io/PortFolio-GJ/#Seccion-Contacto">
+                <textarea  id="text-area" placeholder="Escriba su mensaje" name="contenido" rows="10" style="resize: none;"></textarea>
+                <input id="submit" type="submit" value="Enviar el correo">
+                <input type="hidden" name="_next" value=" https://gaspygj.github.io/PortFolio-GJ/#Seccion-Contacto">
                 <input type="hidden" name="_captcha" value="false">
             </form>
 
@@ -178,12 +178,11 @@
 
     </footer>
 
-
+    
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="./particles.js"></script>
-
     <script src="./main.js"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

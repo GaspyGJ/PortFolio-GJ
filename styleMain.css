@@ -252,6 +252,10 @@ nav .logo {
     /*par centrarlo*/
 }
 
+#form-Seccion-Contacto #email{
+    height: 2em;
+}
+
 #form-Seccion-Contacto * {
     background-color: rgb(235, 225, 225);
     padding: 0.4em;
