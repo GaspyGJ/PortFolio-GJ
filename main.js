@@ -58,6 +58,7 @@ function desplegar_plegarMenu(){
     } );
 }
 desplegar_plegarMenu();
+
 //---------------------------------
 
 //--Para plegar el menu cuando selecciono una opcion
